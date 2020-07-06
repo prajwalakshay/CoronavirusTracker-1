@@ -24,6 +24,8 @@ Shows you the following :
 # API used 
 
 https://corona.lmao.ninja/ 
+
+
 https://api.covid19india.org/
 
 #  Tech Specification
