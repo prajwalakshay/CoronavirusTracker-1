@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Cards_states"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:elevation="3dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:splitMotionEvents="true"
+        app:cardBackgroundColor="#C4E1F1"
+        app:cardCornerRadius="5dp"
+>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp">
+
+            <TextView
+                android:includeFontPadding="false"
+                android:layout_marginTop="3dp"
+                android:id="@+id/StateName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="STATE"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/amaranth" />
+
+            <LinearLayout
+                android:id="@+id/activelayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/StateName"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/activetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="Active Cases: "
+                    android:textColor="@color/activecases"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/ActiveCasesState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="1230"
+                    android:textColor="@color/activecases"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <GridLayout
+                android:id="@+id/GridState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activelayout"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="fill_horizontal"
+                android:columnCount="3"
+                android:padding="5dp"
+                android:rowCount="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:id="@+id/gridconfiremed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text="Confirmed"
+                        android:textColor="@color/TodayCasesColor"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/DeltaConfirmedCasesState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/gridconfiremed"
+                        android:layout_alignBottom="@id/ConfirmedCasesState"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="↑100"
+                        android:textColor="@color/TodayCasesColor"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/ConfirmedCasesState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/gridconfiremed"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/DeltaConfirmedCasesState"
+                        android:drawableRight="@drawable/drawablesick"
+                        android:drawablePadding="3dp"
+                        android:includeFontPadding="false"
+                        android:text="1230"
+                        android:textColor="@color/TodayCasesColor"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_marginLeft="25dp">
+
+                    <TextView
+                        android:id="@+id/gridrecovered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="2dp"
+                        android:text="Recovered"
+                        android:textColor="@color/RecoveredColor"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/DeltaRecoveredCasesState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/gridrecovered"
+                        android:layout_alignBottom="@id/RecoveredCasesState"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="↑100"
+                        android:textColor="@color/RecoveredColor" />
+
+                    <TextView
+                        android:id="@+id/RecoveredCasesState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/gridrecovered"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/DeltaRecoveredCasesState"
+                        android:drawableRight="@drawable/drawablerecovered"
+                        android:drawablePadding="3dp"
+                        android:includeFontPadding="false"
+                        android:text="1230"
+                        android:textColor="@color/RecoveredColor"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_marginLeft="25dp">
+
+                    <TextView
+                        android:id="@+id/gridDeath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="2dp"
+                        android:text="Deaths"
+                        android:textColor="@color/DeathsColor"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/DeltaDeathsCasesState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/gridDeath"
+                        android:layout_alignBottom="@id/DeathsCasesState"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="↑100"
+                        android:textColor="@color/TodayDeathsColor" />
+
+                    <TextView
+                        android:id="@+id/DeathsCasesState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/gridDeath"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/DeltaDeathsCasesState"
+                        android:drawableRight="@drawable/drawabledead"
+                        android:drawablePadding="3dp"
+                        android:includeFontPadding="false"
+                        android:text="1230"
+                        android:textColor="@color/TodayDeathsColor"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </GridLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

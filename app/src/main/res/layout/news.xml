@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/dateToday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Today's Date"
+        android:textColor="@color/activecases"
+        android:textSize="23sp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/NewsCycle"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/dateToday"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/NewsLoading"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:indeterminateTint="@color/activecases" />
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:id="@+id/animationHelp"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/nohelpanimationView"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:scaleType="centerInside"
+            app:lottie_fileName="nohelp.json"
+            app:lottie_loop="true"
+            android:layout_centerHorizontal="true"
+            app:lottie_autoPlay="true"
+
+            />
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/NewsNoUpdates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nohelpanimationView"
+            android:gravity="center"
+            android:text="No updates yet"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/Close_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/NewsCycle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="#FFE1E1"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/Close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_close"
+            android:drawablePadding="10dp"
+            android:drawableTint="#EC2D2D"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="14dp"
+            android:text="close"
+            android:textColor="#EC2D2D"
+            android:textSize="16sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

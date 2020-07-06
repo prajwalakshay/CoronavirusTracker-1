@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="#D2E7F3"
+        tools:context=".UI.Main.IndiaAcivity">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarIndia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C4E1F1"
+            app:menu="@menu/mainmenu"
+            app:subtitle="Spread awareness,not rumours"
+            app:subtitleTextColor="#000000"
+            app:title="India"
+            app:titleTextColor="#000000">
+
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <!-- <RelativeLayout
+             android:id="@+id/toolbarIndia"
+             android:layout_width="match_parent"
+             android:layout_height="?attr/actionBarSize"
+             android:background="#C4E1F1">
+
+             <TextView
+                 android:id="@+id/titleIndia"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:layout_centerVertical="true"
+                 android:background="#C4E1F1"
+                 android:gravity="center"
+                 android:text="India"
+                 android:textColor="#000"
+                 android:textSize="24sp"
+                 android:textStyle="bold" />
+
+             <ImageView
+                 android:id="@+id/supportme"
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginLeft="80dp"
+                 android:layout_marginTop="15dp"
+                 android:layout_toRightOf="@id/titleIndia"
+                 android:src="@drawable/head" />
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_alignParentBottom="true"
+                 android:background="#000" />
+
+         </RelativeLayout> -->
+
+        <RelativeLayout
+            android:id="@+id/activityswitcher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbarIndia"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardIndia_india"
+                    android:layout_width="150dp"
+                    android:layout_height="64dp"
+                    android:layout_marginRight="5dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/Blue">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/cardbg"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/IndiaText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="29dp"
+                            android:layout_centerInParent="true"
+                            android:text="India"
+                            android:textColor="@color/activecases"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/arrowactive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/IndiaText"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="Active Cases=NA"
+                            android:textColor="@color/activecases" />
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardWorld_india"
+                    android:layout_width="150dp"
+                    android:layout_height="64dp"
+                    android:layout_marginLeft="5dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/Blue">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/worldText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="29dp"
+                            android:layout_centerInParent="true"
+                            android:text="World"
+                            android:textColor="@color/activecases"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/arrowactiveworld"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/worldText"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="Active Cases=NA"
+                            android:textColor="@color/activecases" />
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/Status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activityswitcher"
+            android:layout_centerHorizontal="true"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="#D2E7F3"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/sick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="Confirmed"
+                    android:textColor="@color/TodayCasesColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/arrowconfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+000"
+                    android:textColor="@color/TodayCasesColor" />
+
+
+                <TextView
+                    android:id="@+id/ConfirmedIndia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Loading ..."
+                    android:textColor="@color/TodayCasesColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#000" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="#D2E7F3"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/smile" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="Recovered"
+                    android:textColor="@color/RecoveredColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/arrowrecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+000"
+                    android:textColor="@color/RecoveredColor" />
+
+                <TextView
+                    android:id="@+id/RecoveredIndia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Loading ..."
+                    android:textColor="@color/RecoveredColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#000" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="#D2E7F3"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/dead" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="Deaths"
+                    android:textColor="@color/DeathsColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/arrowdeath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+000"
+                    android:textColor="@color/DeathsColor" />
+
+                <TextView
+                    android:id="@+id/DeathsIndia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Loading ..."
+                    android:textColor="@color/DeathsColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/updatetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Status"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/ic_replay"
+            android:drawablePadding="3dp"
+            android:drawableTint="@color/activecases"
+            android:gravity="center"
+            android:text="Last Updated"
+            android:textColor="@color/activecases"
+            android:textSize="17sp" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/updatetime"
+            android:background="#000" />
+
+        <ProgressBar
+            android:id="@+id/StateLoading"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="#000" />
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_margin="10dp"
+            android:id="@+id/searchState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:queryHint="Search State"
+            app:defaultQueryHint="Search State"
+            app:iconifiedByDefault="false" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerViewDataIndia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchState"
+            android:background="#FFFFFF"
+            android:padding="2dp"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/noInternetStateLayout"
+            android:layout_below="@id/searchState"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_above="@id/noHelp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#021C2C"
+                android:text="No Internet connection please try again :("
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_centerInParent="true"
+                android:id="@+id/noHelp"
+                android:layout_width="325dp"
+                android:layout_height="325dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                app:lottie_fileName="nointernet.json"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true" />
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+</layout>

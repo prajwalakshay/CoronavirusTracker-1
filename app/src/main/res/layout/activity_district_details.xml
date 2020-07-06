@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="#D2E7F3"
+        tools:context=".UI.Main.DistrictDetails">
+
+
+
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarDis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C4E1F1"
+            app:menu="@menu/mainmenu"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:subtitle="Spread awareness,not rumours"
+            app:subtitleTextColor="#000000"
+            app:title="State"
+            app:titleTextColor="#000000">
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <LinearLayout
+            android:id="@+id/StatusSates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbarDis"
+            android:layout_centerHorizontal="true"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="#D2E7F3"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/sick" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="Confirmed"
+                    android:textColor="@color/TodayCasesColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/arrowconfirmedStates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+000"
+                    android:textColor="@color/TodayCasesColor" />
+
+
+                <TextView
+                    android:id="@+id/ConfirmedStates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Loading ..."
+                    android:textColor="@color/TodayCasesColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#000" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="#D2E7F3"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/smile" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="Recovered"
+                    android:textColor="@color/RecoveredColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/arrowrecoveredStates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+000"
+                    android:textColor="@color/RecoveredColor" />
+
+                <TextView
+                    android:id="@+id/RecoveredStates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Loading ..."
+                    android:textColor="@color/RecoveredColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#000" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="#D2E7F3"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/dead" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="Deaths"
+                    android:textColor="@color/DeathsColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/arrowdeathStates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+000"
+                    android:textColor="@color/DeathsColor" />
+
+                <TextView
+                    android:id="@+id/DeathsStates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Loading ..."
+                    android:textColor="@color/DeathsColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/updatetimeStates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/StatusSates"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/ic_replay"
+            android:drawablePadding="3dp"
+            android:drawableTint="@color/activecases"
+            android:gravity="center"
+            android:text="Last Updated"
+            android:textColor="@color/activecases"
+            android:textSize="17sp" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/updatetimeStates"
+            android:background="#000" />
+
+
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchDis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:queryHint="Search District"
+            app:defaultQueryHint="Search District"
+            app:iconifiedByDefault="false" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerViewDataStates"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchDis"
+            android:background="#FFFFFF"
+            android:padding="2dp" />
+
+        <ProgressBar
+            android:layout_centerInParent="true"
+            android:id="@+id/DisLoading"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:indeterminateTint="#000" />
+
+        <TextView
+            tools:visibility="visible"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/DeathsColor"
+            android:text="Sorry, No updates available yet"
+            android:textSize="18sp"
+            android:id="@+id/NoUpdates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+</layout>

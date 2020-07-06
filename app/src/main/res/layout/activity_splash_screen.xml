@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".SplashScreen">
+
+    <TextView
+        android:layout_marginBottom="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:text="CoronaVirus Tracker"
+        android:textColor="#000000"
+        android:textSize="28sp" />
+
+<!--    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="325dp"
+        android:layout_height="325dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/mylogo" />
+-->
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/logo"
+        android:layout_width="325dp"
+        android:layout_height="325dp"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        app:lottie_fileName="splashScreenJSON.json"
+        app:lottie_loop="false"
+        app:lottie_autoPlay="true" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="17dp"
+            android:text="Made with"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/hearts"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/hearts" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="by Utsav Devadiga"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+<TextView
+    android:layout_marginTop="3dp"
+    android:textColor="#000000"
+    android:gravity="center"
+    android:id="@+id/SaveLIves"
+    android:textSize="20sp"
+    android:text="Stay Home, Save lives ☺"
+    android:layout_width="match_parent"
+    android:layout_below="@id/linear"
+    android:layout_height="wrap_content"/>
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/SaveLIves"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>

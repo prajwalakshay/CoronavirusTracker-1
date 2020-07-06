@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+    <color name="Blue">#D2E7F3</color>
+    <color name="CasesColor">#FFDE7D</color>
+    <color name="TodayCasesColor">#ffc107</color>
+    <color name="DeathsColor">#dc3545</color>
+    <color name="TodayDeathsColor">#dc3545</color>
+    <color name="RecoveredColor">#28a745</color>
+    <color name="CriticalColor">#FF9800</color>
+    <color name="activecases">#4c75f2</color>
+    <color name="LBlue">#D2E7F3</color>
+    <color name="ItemBlue">#EBF3F6</color>
+</resources>
